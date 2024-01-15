@@ -55,6 +55,7 @@ struct MainTabView: View {
     
     @State var authenticationViewModel = AuthenticationViewModel()
     @State var viewModel = MainTabViewModel()
+    @State private var showPaywall = false
     
     init() {
         _selectedTabId = State(initialValue: selectedTab)
@@ -75,6 +76,9 @@ struct MainTabView: View {
         .sheet(item: $viewModel.alert) { alert in
             AlertView(alert: alert)
                 .presentationDetents([.medium])
+        }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView()
         }
         .onChange(of: scenePhase) { _, newScenePhase in
             guard
