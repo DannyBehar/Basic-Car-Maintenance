@@ -86,4 +86,11 @@ enum SFSymbol {
   
 }
 
+enum IAPProduct {
+    static let smallTip = "com.icyappstudio.BCM.tip.small"
+    static let mediumTip = "com.icyappstudio.BCM.tip.medium"
+    static let largeTip = "com.icyappstudio.BCM.tip.large"
+    static let xLargeTip = "com.icyappstudio.BCM.tip.xLarge"
+}
+
 // swiftlint:enable line_length
