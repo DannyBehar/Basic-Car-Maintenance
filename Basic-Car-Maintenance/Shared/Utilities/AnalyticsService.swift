@@ -38,4 +38,6 @@ enum AnalyticEvent: String {
     case vehicleCreate = "vehicle_create"
     case vehicleUpdate = "vehicle_update"
     case vehicleDelete = "vehicle_delete"
+    
+    case successfulPurchase = "successful_purchase"
 }
