@@ -4573,6 +4573,9 @@
         }
       }
     },
+    "Tip Jar" : {
+
+    },
     "Title" : {
       "comment" : "Maintenance event title text field header",
       "localizations" : {

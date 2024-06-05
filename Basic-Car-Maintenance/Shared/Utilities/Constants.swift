@@ -75,6 +75,7 @@ enum SFSymbol {
     static let contributors = "person.3.fill"
     static let person = "person"
     static let iPhoneWithApps = "apps.iphone"
+    static let handAndSparkles = "hands.and.sparkles"
     
     // ChoseAopIcon View
     static let checkmarkFill = "checkmark.circle.fill"

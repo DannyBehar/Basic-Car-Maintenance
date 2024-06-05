@@ -129,8 +129,6 @@ struct DashboardView: View {
                     }
                     
                     Button {
-                        // TODO: Show Paywall
-                        // Can only add 3 events, adding the 4th triggers the paywall
                         viewModel.isShowingAddMaintenanceEvent = true
                     } label: {
                         Image(systemName: SFSymbol.plus)
