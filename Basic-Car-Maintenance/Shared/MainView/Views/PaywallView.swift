@@ -5,11 +5,15 @@
 //  Created by Mikaela Caron on 1/14/24.
 //
 
+import StoreKit
 import SwiftUI
 
 struct PaywallView: View {
+    
+    @State private var purchaseManager = PurchaseManager()
+    
     var body: some View {
-        Text("Paywall View")
+        StoreView(products: purchaseManager.products)
     }
 }
 

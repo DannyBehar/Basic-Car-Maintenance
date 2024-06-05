@@ -3555,9 +3555,6 @@
         }
       }
     },
-    "Paywall View" : {
-
-    },
     "Preferred units" : {
       "comment" : "Label for units selected when adding an odometer reading",
       "localizations" : {

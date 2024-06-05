@@ -19,6 +19,8 @@ class PurchaseManager {
     
     var loadState = LoadState.loading
     
+    private(set) var products = [Product]()
+    
     private var storeTask: Task<Void, Never>?
     
     init() {
@@ -69,6 +71,8 @@ class PurchaseManager {
                     IAPProduct.xLargeTip
                 ]
             )
+            
+            self.products = products
             
             if let product = products.first {
                 loadState = LoadState.loaded(product)
