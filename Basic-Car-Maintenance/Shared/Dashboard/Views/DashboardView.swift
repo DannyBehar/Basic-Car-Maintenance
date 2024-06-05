@@ -153,8 +153,6 @@ struct DashboardView: View {
         .onChange(of: scenePhase) { _, newScenePhase in
             guard case .active = newScenePhase else { return }
             
-            // TODO: Show Paywall
-            
             guard let action = actionService.action,
                   action == .newMaintenance
             else {
