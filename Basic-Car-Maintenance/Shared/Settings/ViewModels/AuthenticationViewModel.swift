@@ -9,7 +9,6 @@ import AuthenticationServices
 import CryptoKit
 import FirebaseAuth
 import Foundation
-import RevenueCat
 import SwiftUI
 
 enum AuthenticationState {
@@ -58,9 +57,6 @@ final class AuthenticationViewModel {
             Task {
                 do {
                     let authDataResult = try await Auth.auth().signInAnonymously()
-                    Purchases.shared.logIn(authDataResult.user.uid) { _, _, _ in
-                        // customerInfo updated for my_app_user_id
-                    }
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -70,8 +66,6 @@ final class AuthenticationViewModel {
             if let user = Auth.auth().currentUser {
                 self.user = user
                 AnalyticsService.shared.setUserID(user.uid)
-                Purchases.shared.logIn(user.uid) { _, _, _ in
-                }
             }
         }
     }
@@ -79,8 +73,6 @@ final class AuthenticationViewModel {
     func signOut() {
         do {
             try Auth.auth().signOut()
-            Purchases.shared.logOut { _, _ in
-            }
             authenticationState = .unauthenticated
             flow = .signUp
             signInAnonymously()

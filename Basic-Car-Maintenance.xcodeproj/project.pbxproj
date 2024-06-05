@@ -29,8 +29,6 @@
 		E584996A2ACDDAFF00634660 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58499692ACDDAFF00634660 /* Contributor.swift */; };
 		FF09FC912AB6FF44006BE61A /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF09FC902AB6FF44006BE61A /* AuthenticationView.swift */; };
 		FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */; };
-		FF199E922B4A123B00EBA229 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = FF199E912B4A123B00EBA229 /* RevenueCat */; };
-		FF199E942B4A123B00EBA229 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF199E932B4A123B00EBA229 /* RevenueCatUI */; };
 		FF199E962B4A130600EBA229 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF199E952B4A130600EBA229 /* StoreKit.framework */; };
 		FF199E982B54D7AC00EBA229 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF199E972B54D7AC00EBA229 /* PaywallView.swift */; };
 		FF218EF62B00865F0025A533 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF218EF52B00865F0025A533 /* AnalyticsService.swift */; };
@@ -183,11 +181,9 @@
 				FFC8CDAF2AA3867A00D129A6 /* FirebaseFirestoreSwift in Frameworks */,
 				FFC8CDA92AA3867A00D129A6 /* FirebaseAnalyticsSwift in Frameworks */,
 				FFC8CDAD2AA3867A00D129A6 /* FirebaseFirestore in Frameworks */,
-				FF199E922B4A123B00EBA229 /* RevenueCat in Frameworks */,
 				FFC8CDAB2AA3867A00D129A6 /* FirebaseAuth in Frameworks */,
 				FFC8CDA72AA3867A00D129A6 /* FirebaseAnalytics in Frameworks */,
 				FF4E82C02AD39863004949AF /* FirebaseRemoteConfigSwift in Frameworks */,
-				FF199E942B4A123B00EBA229 /* RevenueCatUI in Frameworks */,
 				FF153AFF2B07C3E000D0BA30 /* FirebaseCrashlytics in Frameworks */,
 				FF4E82C22AD39863004949AF /* FirebaseStorage in Frameworks */,
 				FF199E962B4A130600EBA229 /* StoreKit.framework in Frameworks */,
@@ -527,8 +523,6 @@
 				FF4E82BF2AD39863004949AF /* FirebaseRemoteConfigSwift */,
 				FF4E82C12AD39863004949AF /* FirebaseStorage */,
 				FF153AFE2B07C3E000D0BA30 /* FirebaseCrashlytics */,
-				FF199E912B4A123B00EBA229 /* RevenueCat */,
-				FF199E932B4A123B00EBA229 /* RevenueCatUI */,
 			);
 			productName = "Basic-Car-Maintenance";
 			productReference = FF5D13A32A86C2D600BC9BD6 /* Basic-Car-Maintenance.app */;
@@ -634,7 +628,6 @@
 			mainGroup = FF5D139A2A86C2D500BC9BD6;
 			packageReferences = (
 				FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				FF199E902B4A123B00EBA229 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = FF5D13A42A86C2D600BC9BD6 /* Products */;
 			projectDirPath = "";
@@ -1200,14 +1193,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FF199E902B4A123B00EBA229 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.31.6;
-			};
-		};
 		FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1223,16 +1208,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FFC8CDA52AA3867A00D129A6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
-		};
-		FF199E912B4A123B00EBA229 /* RevenueCat */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FF199E902B4A123B00EBA229 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCat;
-		};
-		FF199E932B4A123B00EBA229 /* RevenueCatUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FF199E902B4A123B00EBA229 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCatUI;
 		};
 		FF4E82BD2AD39863004949AF /* FirebaseRemoteConfig */ = {
 			isa = XCSwiftPackageProductDependency;
