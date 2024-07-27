@@ -56,7 +56,7 @@ final class AuthenticationViewModel {
             print("No user signed in. Trying to sign in anonymously.")
             Task {
                 do {
-                    let authDataResult = try await Auth.auth().signInAnonymously()
+                    _ = try await Auth.auth().signInAnonymously()
                 } catch {
                     print(error.localizedDescription)
                 }
@@ -125,11 +125,8 @@ extension AuthenticationViewModel {
                     print("Unable to fetch identify token.")
                     return
                 }
-                guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                    print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
-                    return
-                }
                 
+                let idTokenString = String(decoding: appleIDToken, as: UTF8.self)
                 let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
                                                                rawNonce: nonce, fullName:
                                                                 appleIDCredential.fullName)
